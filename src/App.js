@@ -1,23 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Person from "./components/Person/Person";
+import PersonWithClass from "./components/PersonWithClass/PersonWithClass";
 
 function App() {
+  const person = [
+    {
+      name: "Federico",
+      surname: "Arévalo",
+      age: 34,
+    },
+    {
+      name: "Miguel",
+      surname: "Lete",
+      age: 32,
+    },
+    {
+      name: "Daniel",
+      surname: "Ito",
+      age: 28,
+    },
+  ];
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <strong>Forma funcional:</strong>
+      <br />
+      <Person person={person[0]} />
+      <br />
+      <Person person={person[1]} />
+      <br />
+      <Person person={person[2]} />
+      <br />
+      <br />
+      <strong>Forma con classes:</strong>
+      <br />
+      <PersonWithClass person={person[0]} />
+      <br />
+      <PersonWithClass person={person[1]} />
+      <br />
+      <PersonWithClass person={person[2]} />
+      <br />
     </div>
   );
 }

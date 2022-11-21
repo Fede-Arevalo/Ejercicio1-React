@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
 
-const Person = () => {
+const Person = (props) => {
+  console.log(props);
   return (
-    <div>Person</div>
-  )
-}
+    <>
+      <span>{props.person.name}</span>,
+      <span>{props.person.surname}</span>,
+      <span>{props.person.age}</span>
+    </>
+  );
+};
 
-export default Person
+export default Person;
